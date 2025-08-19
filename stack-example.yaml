@@ -1,0 +1,42 @@
+networks:
+  appnet:
+    driver: overlay
+volumes:
+  phpmyadmin-sessions:
+services:
+  mysql8:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypass
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-prootpass"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - "node.role == worker"
+    networks:
+      - appnet
+  app:
+    image: phpmyadmin:latest
+    environment:
+      PMA_HOST: mysql8
+      PMA_PORT: "3306"
+      PMA_ABSOLUTE_URI: "http://172.31.40.129:9998/"
+    volumes:
+      - phpmyadmin-sessions:/sessions
+    ports:
+      - "9998:80"
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - "node.role == worker"
+    networks:
+      - appnet
