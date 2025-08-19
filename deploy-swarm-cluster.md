@@ -24,6 +24,14 @@ root@swarm-master-01:/home/ubuntu# hostnamectl set-hostname swarm-master-01
 root@swarm-master-01:/home/ubuntu# hostname
 swarm-master-01
 ```
+## Change default values system limit
+```
+# vi /etc/systemd/system.conf
+---
+DefaultLimitNOFILE=65000
+DefaultLimitNPROC=65000
+DefaultTasksMax=65000
+```
 ## Config sysctl
 ```
 # vi /etc/sysctl.conf
