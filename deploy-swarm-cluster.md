@@ -24,6 +24,17 @@ root@swarm-master-01:/home/ubuntu# hostnamectl set-hostname swarm-master-01
 root@swarm-master-01:/home/ubuntu# hostname
 swarm-master-01
 ```
+## Config sysctl
+```
+# vi /etc/sysctl.conf
+---
+net.ipv4.ip_forward=1
+net.ipv4.conf.all.forwarding=1
+net.bridge.bridge-nf-call-iptables=1
+net.bridge.bridge-nf-call-ip6tables=1
+net.bridge.bridge-nf-call-arptables=1
+```
+
 ## Install docker & docker compose for all nodes (master & worker)
 [References](https://docs.docker.com/compose/install/standalone/)
 ```
