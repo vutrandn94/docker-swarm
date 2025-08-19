@@ -66,8 +66,7 @@ jk5t4bq0rowh62g70igein6t9     swarm-worker-01   Ready     Active                
 
 ## Clear status of worker node that has left the cluster (execute on worker node has left the cluster - OPTIONAL)
 
-[References](https://docs.docker.com/engine/swarm/swarm-tutorial/drain-node/](https://docs.docker.com/reference/cli/docker/node/rm/ )
-> [!TIP]
+[References](https://docs.docker.com/reference/cli/docker/node/rm/)
 > This document is useful if you want to reuse worker nodes.
 
 **Syntax:**
