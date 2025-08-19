@@ -1,6 +1,7 @@
 # DEPLOY DOCKER SWARM CLUSTER
 
 ## Lab info (3 master, 3 worker)
+[References](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 | Hostname | Private IP Address | Public IP Mapping | OS | Role | Port Open |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | swarm-master-01 | 172.31.40.129 | 13.229.86.92 | Ubuntu 22.04.5 LTS | master | 2377(TCP), 7946 (TCP/UDP), 4789 (UDP) | 
@@ -24,6 +25,7 @@ root@swarm-master-01:/home/ubuntu# hostname
 swarm-master-01
 ```
 ## Install docker & docker compose for all nodes (master & worker)
+[References](https://docs.docker.com/compose/install/standalone/)
 ```
 # apt-get update
 # apt-get install ca-certificates curl
