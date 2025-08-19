@@ -77,8 +77,7 @@ To add a manager to this swarm, run the following command:
 **Copy command return output to join master node.**
 
 > [!TIP]
-> To retrive command and token join for master node: docker swarm join-token manager
-> To retrive command and token join for worker node: docker swarm join-token worker
+> To retrive command and token join for master node: "docker swarm join-token manager", To retrive command and token join for worker node: "docker swarm join-token worker"
 
 ## Join remaining master node to cluster (execute on node swarm-master-02 and swarm-master-03)
 **Copy and paste command return output to join master node**
