@@ -1,8 +1,8 @@
 # Docker Swarm all-in-one
 | Use case | Tutorial file | 
 | :--- | :--- |
-| Deploy new cluster | deploy-swarm-cluster.md |
-| Remove node | remove-node.md |
+| Deploy new cluster | [deploy-swarm-cluster.md](https://github.com/vutrandn94/docker-swarm/blob/main/deploy-swarm-cluster.md) |
+| Remove node | [remove-node.md](https://github.com/vutrandn94/docker-swarm/blob/main/remove-node.md) |
 
 ## Command note
 **Example apply / update 1 stack (declarative):**
